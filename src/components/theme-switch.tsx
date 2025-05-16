@@ -45,26 +45,31 @@ export function ThemeSwitcher() {
   const currentTheme = themes.find((theme) => theme.value === resolvedTheme);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          {currentTheme?.icon && (
-            <currentTheme.icon className="h-[1.2rem] w-[1.2rem] transition-all" />
-          )}
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {themes.map((theme) => (
-          <DropdownMenuItem
-            key={theme.value}
-            onClick={() => setTheme(theme.value)}
-          >
-            <theme.icon className="mr-2 h-4 w-4" />
-            <span>{theme.label}</span>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="icon" aria-label="Select theme">
+            {currentTheme?.icon && (
+              <currentTheme.icon
+                className="h-[1.2rem] w-[1.2rem] transition-all"
+                size={16}
+              />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="min-w-32">
+          {themes.map((theme) => (
+            <DropdownMenuItem
+              key={theme.value}
+              onClick={() => setTheme(theme.value)}
+            >
+              <theme.icon className="opacity-60" aria-hidden="true" />
+              <span>{theme.label}</span>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 }

@@ -8,13 +8,25 @@ const inter = Inter({
   subsets: ['latin'],
 });
 
+const appName = 'Taze AI Docs';
+
 export const metadata: Metadata = {
   title: {
-    default: 'Taze AI Docs',
-    template: '%s | TazeAI Docs',
+    default: appName,
+    template: `%s | ${appName}`,
   },
-  description: 'Taze AI Docs',
+  description: appName,
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: appName,
+  },
+  icons: {
+    icon: '/images/logo.png',
+  },
 };
+
+export const dynamic = 'force-dynamic';
 
 export default async function Layout({
   children,

@@ -5,6 +5,8 @@
 
 @source "../../src/**/*.{ts,tsx}";
 
+@config "../../tailwind.config.ts";
+
 @custom-variant dark (&:is(.dark *));
 
 :root {

@@ -11,7 +11,6 @@ export type ProvidersProps = {
 
 const cn: Partial<Translations> = {
   search: 'Translated Content',
-  // other translations
 };
 
 export default function Providers({ children, lang }: ProvidersProps) {

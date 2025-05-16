@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { ThemeSwitcher } from '@/components/theme-switch';
 import { i18n } from '@/lib/i18n';
 
 export function baseOptions(lang: string): BaseLayoutProps {
@@ -28,8 +27,7 @@ export function baseOptions(lang: string): BaseLayoutProps {
     ],
     themeSwitch: {
       enabled: true,
-      mode: 'light-dark-system',
-      component: <ThemeSwitcher />,
+      mode: 'light-dark',
     },
     githubUrl: 'https://github.com/tazeai/tazeai',
     i18n,
