@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { RootProvider } from 'fumadocs-ui/provider';
-import { locales } from '@/lib/i18n';
-import { Translations } from 'fumadocs-ui/i18n';
+import { RootProvider } from "fumadocs-ui/provider";
+import { locales } from "@/lib/i18n";
+import { Translations } from "fumadocs-ui/i18n";
 
 export type ProvidersProps = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ export type ProvidersProps = {
 };
 
 const cn: Partial<Translations> = {
-  search: 'Translated Content',
+  search: "Translated Content",
 };
 
 export default function Providers({ children, lang }: ProvidersProps) {

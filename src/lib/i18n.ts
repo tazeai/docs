@@ -1,17 +1,17 @@
-import type { I18nConfig } from 'fumadocs-core/i18n';
+import type { I18nConfig } from "fumadocs-core/i18n";
 
 export const locales = [
   {
-    name: 'English',
-    locale: 'en',
+    name: "English",
+    locale: "en",
   },
   {
-    name: '简体中文',
-    locale: 'zh-cn',
+    name: "简体中文",
+    locale: "zh-cn",
   },
   {
-    name: '繁體中文',
-    locale: 'zh-tw',
+    name: "繁體中文",
+    locale: "zh-tw",
   },
 ];
 
@@ -21,5 +21,5 @@ export const defaultLanguage = languages[0]!;
 export const i18n: I18nConfig = {
   defaultLanguage,
   languages,
-  hideLocale: 'never',
+  hideLocale: "never",
 };

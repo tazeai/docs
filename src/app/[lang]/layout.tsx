@@ -1,14 +1,14 @@
-import { Inter } from 'next/font/google';
-import type { ReactNode } from 'react';
-import '@/styles/globals.css';
-import type { Metadata } from 'next';
-import Providers from './providers';
+import { Inter } from "next/font/google";
+import type { ReactNode } from "react";
+import "@/styles/globals.css";
+import type { Metadata } from "next";
+import Providers from "./providers";
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ["latin"],
 });
 
-const appName = 'Taze AI Docs';
+const appName = "Taze AI Docs";
 
 export const metadata: Metadata = {
   title: {
@@ -18,15 +18,15 @@ export const metadata: Metadata = {
   description: appName,
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: "default",
     title: appName,
   },
   icons: {
-    icon: '/images/logo.png',
+    icon: "/images/logo.png",
   },
 };
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default async function Layout({
   children,

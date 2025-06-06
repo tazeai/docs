@@ -1,11 +1,11 @@
-import { readFile } from 'node:fs/promises';
-import fg from 'fast-glob';
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import remarkGfm from 'remark-gfm';
-import remarkStringify from 'remark-stringify';
-import remarkMdx from 'remark-mdx';
-import { remarkInclude } from 'fumadocs-mdx/config';
+import { readFile } from "node:fs/promises";
+import fg from "fast-glob";
+import matter from "gray-matter";
+import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkStringify from "remark-stringify";
+import remarkMdx from "remark-mdx";
+import { remarkInclude } from "fumadocs-mdx/config";
 
 export const revalidate = false;
 
@@ -20,7 +20,7 @@ const processor = remark()
 
 export async function GET() {
   // all scanned content
-  const files = await fg(['./content/docs/**/*.mdx']);
+  const files = await fg(["./content/docs/**/*.mdx"]);
 
   const scan = files.map(async (file) => {
     const fileContent = await readFile(file);
@@ -39,5 +39,5 @@ ${processed}`;
 
   const scanned = await Promise.all(scan);
 
-  return new Response(scanned.join('\n\n'));
+  return new Response(scanned.join("\n\n"));
 }

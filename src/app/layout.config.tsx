@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { i18n } from '@/lib/i18n';
+import Image from "next/image";
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { i18n } from "@/lib/i18n";
 
 export function baseOptions(lang: string): BaseLayoutProps {
   return {
@@ -20,16 +20,16 @@ export function baseOptions(lang: string): BaseLayoutProps {
     },
     links: [
       {
-        text: 'Docs',
-        url: lang ? `/${lang}/docs` : '/docs',
-        active: 'nested-url',
+        text: "Docs",
+        url: lang ? `/${lang}/docs` : "/docs",
+        active: "nested-url",
       },
     ],
     themeSwitch: {
       enabled: true,
-      mode: 'light-dark',
+      mode: "light-dark",
     },
-    githubUrl: 'https://github.com/tazeai/tazeai',
+    githubUrl: "https://github.com/tazeai/tazeai",
     i18n,
   };
 }
